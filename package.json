@@ -6,7 +6,6 @@
   "scripts": {
     "cy:test": "node_modules\\.bin\\cypress run",
     "cy:open": "node_modules\\.bin\\cypress open",
-    "postinstall": "npm run test",
     "cy:ui-test": "cypress run --spec 'cypress/tests/1-7-UI-tests/*.js'",
     "cy:api-test": "cypress run --spec 'cypress/tests/8-API-tests/*.js'",
     "cy:test-all": "npm run cy:ui-test && npm run cy:api-test",
