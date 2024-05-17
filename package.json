@@ -1,0 +1,37 @@
+{
+  "name": "cypress-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:test": "node_modules\\.bin\\cypress run",
+    "cy:open": "node_modules\\.bin\\cypress open",
+    "postinstall": "npm run test",
+    "cy:ui-test": "cypress run --spec 'cypress/tests/1-7-UI-tests/*.js'",
+    "cy:api-test": "cypress run --spec 'cypress/tests/8-API-tests/*.js'",
+    "cy:test-all": "npm run cy:ui-test && npm run cy:api-test",
+    "clean:reports": "(if exist cypress\\reports (rmdir /Q /S cypress\\reports))"
+  },
+  "author": "Stefan",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "@bahmutov/cy-api": "^2.2.6",
+    "@cypress/grep": "^4.0.0",
+    "@cypress/xpath": "^2.0.3",
+    "@testing-library/cypress": "^10.0.1",
+    "cypress": "^13.2.0",
+    "cypress-map": "^1.21.1",
+    "cypress-mochawesome-reporter": "^3.6.0",
+    "cypress-network-idle": "^1.14.2",
+    "cypress-real-events": "^1.10.3",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "chai-json-schema": "^1.5.1",
+    "chai-sorted": "^0.2.0",
+    "cypress-intercept-formdata": "^0.5.2",
+    "cypress-multi-reporters": "^1.6.3",
+    "cypress-qase-reporter": "^1.4.3"
+  }
+}
